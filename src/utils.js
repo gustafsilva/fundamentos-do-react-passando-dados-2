@@ -1,6 +1,11 @@
 const getUsersWhoHaveFavoritesTheMovie = (profiles, users, movieId) => {
   const usersFavorite = profiles.filter(profile => profile.favoriteMovieID === movieId)
-    .map(profile => users[profile.userID]);
+    .map(profile => {
+      let user = users[profile.userID]
+      
+      user.profileID = profile.id;
+      return user;
+    });
 
   return usersFavorite;
 }
