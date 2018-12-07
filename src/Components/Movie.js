@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Movie extends Component {
   renderUserFavorite(user) {
-    return <li key={user.id}>{user.name}</li>
+    return <li key={user.profileID}>{user.name}</li>
   }
 
   renderUsersFavorite(users) {
