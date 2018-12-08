@@ -112,7 +112,7 @@ class App extends Component {
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
         <h2>How Popular is Your Favorite Movie?</h2>
-        <ListMovie movies={moviesDetails}/>
+        <ListMovie movies={moviesDetails} />
       </div>
     );
   }

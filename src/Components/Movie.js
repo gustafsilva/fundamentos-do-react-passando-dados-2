@@ -8,7 +8,7 @@ class Movie extends Component {
   renderUsersFavorite(users) {
     if (users.length > 0) {
       return (
-        <div className='movie-users-favorite'>
+        <div className='movie-list-users-favorited'>
           <p>Linked By:</p>
           <ul>
             {users.map(user => this.renderUserFavorite(user))}
@@ -21,12 +21,12 @@ class Movie extends Component {
   }
 
   render() {
-    const { movie, usersFavorite } = this.props.movieDetail;
+    const { movieDetail } = this.props;
 
     return (
       <div className='movie-detail'>
-        <h2>{movie.name}</h2>
-        {this.renderUsersFavorite(usersFavorite)}
+        <h2>{movieDetail.name}</h2>
+        {this.renderUsersFavorite(movieDetail.usersFavorite)}
       </div>
     );
   }

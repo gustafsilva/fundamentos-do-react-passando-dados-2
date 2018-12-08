@@ -5,9 +5,7 @@ import Movie from './Movie';
 class ListMovie extends Component {
 
   renderMovieDetail(movieDetail) {
-    const { movie } = movieDetail;
-
-    return <Movie key={movie.id} movieDetail={movieDetail} />;
+    return <Movie key={movieDetail.id} movieDetail={movieDetail} />;
   }
 
   render() {
